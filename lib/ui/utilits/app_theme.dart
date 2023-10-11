@@ -30,6 +30,23 @@ abstract class AppTheme{
     ),
 
   );
+  static ThemeData darkTheme = ThemeData(
+    primaryColor: AppColor.primaryColor,
+    appBarTheme: AppBarTheme(
+        color: AppColor.primaryColor,
+        elevation: 0,
+        titleTextStyle: appBarTextStyle
+    ),
+    bottomNavigationBarTheme: BottomNavigationBarThemeData(
+        selectedItemColor: AppColor.primaryColor,
+        unselectedItemColor: AppColor.grey,
+        selectedIconTheme: IconThemeData(size: 32),
+        unselectedIconTheme: IconThemeData(size: 32),
+        showSelectedLabels: false,
+        showUnselectedLabels: false
+    ),
+
+  );
 
 
 
