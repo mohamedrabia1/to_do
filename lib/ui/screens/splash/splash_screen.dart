@@ -13,7 +13,6 @@ static const routeName = "splash";
 class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     Future.delayed(Duration(seconds: 3),(){
       Navigator.pushReplacementNamed(context, HomeScreen.routeName);
