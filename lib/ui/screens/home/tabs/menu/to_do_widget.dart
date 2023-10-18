@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:to_do/models/todo_dm.dart';
 import 'package:to_do/ui/utilits/app_color.dart';
 import 'package:to_do/ui/utilits/app_theme.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 
 class ToDoWidget extends StatelessWidget {
+TodoDM model;
+ToDoWidget({required this.model});
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -38,9 +41,9 @@ class ToDoWidget extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text("Play basket ball",style: AppTheme.tackTitleTextStyle,),
+                  Text(model.title,style: AppTheme.tackTitleTextStyle,),
                   SizedBox(height: 6),
-                  Text("Description",style: AppTheme.tackDescriptionTextStyle,textAlign: TextAlign.start,)
+                  Text(model.description,style: AppTheme.tackDescriptionTextStyle,textAlign: TextAlign.start,)
                 ],
               ),
               Spacer(),
