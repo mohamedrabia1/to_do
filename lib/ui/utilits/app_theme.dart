@@ -17,6 +17,7 @@ abstract class AppTheme{
      scaffoldBackgroundColor: AppColor.accentColor,
     primaryColor: AppColor.primaryColor,
     appBarTheme: AppBarTheme(
+      iconTheme: IconThemeData(color: AppColor.black),
       color: AppColor.primaryColor,
       elevation: 0,
       titleTextStyle: appBarTextStyle
