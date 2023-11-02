@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:to_do/ui/screens/auth/register/register_screen.dart';
 import 'package:to_do/ui/screens/home/home_screen.dart';
-import 'package:to_do/ui/utilits/app_assets.dart';
 import 'dart:ui';
 import 'package:to_do/ui/utilits/app_color.dart';
 import '../../../../models/app_user.dart';

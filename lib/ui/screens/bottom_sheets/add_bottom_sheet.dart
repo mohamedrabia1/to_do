@@ -1,5 +1,4 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:to_do/models/app_user.dart';
@@ -62,6 +61,7 @@ class _AddBottomSheetState extends State<AddBottomSheet> {
     CollectionReference todosCollectionRef =
     AppUser.collection().doc(AppUser.currentUser!.id).collection("todos");
     DocumentReference newEmptyDoc =  todosCollectionRef.doc();
+
     await newEmptyDoc.set({
       "id" : newEmptyDoc.id ,
       "title" : titleController.text,
@@ -69,6 +69,7 @@ class _AddBottomSheetState extends State<AddBottomSheet> {
       "date" : selectedDate,
       "isDone" : false,
     });
+
     provider.refreshTodosList();
     Navigator.pop(context);
   }
@@ -80,4 +81,5 @@ class _AddBottomSheetState extends State<AddBottomSheet> {
       lastDate: DateTime.now().add(Duration(days: 1095))) ?? selectedDate;
   setState(() {});
   }
+
 }

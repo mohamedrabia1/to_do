@@ -5,6 +5,7 @@ import 'package:to_do/ui/provider/list_provider.dart';
 import 'package:to_do/ui/screens/auth/login/login_screen.dart';
 import 'package:to_do/ui/screens/auth/register/register_screen.dart';
 import 'package:to_do/ui/screens/home/home_screen.dart';
+import 'package:to_do/ui/screens/home/tabs/menu/edit_task_screen.dart';
 import 'package:to_do/ui/screens/splash/splash_screen.dart';
 import 'package:to_do/ui/utilits/app_theme.dart';
 import 'package:provider/provider.dart';
@@ -30,6 +31,7 @@ class MyApp extends StatelessWidget {
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
       routes: {
+        EditTaskScreen.routeName: (_) => EditTaskScreen(),
         LoginScreen.routeName: (_) => LoginScreen(),
         RegisterScreen.routeName: (_) =>  RegisterScreen(),
         HomeScreen.routeName: (_) => HomeScreen(),
